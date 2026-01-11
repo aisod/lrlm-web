@@ -58,9 +58,15 @@
 None required for basic functionality. Optional variables:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://aisod.solutions
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX  # Google Analytics
-CONTACT_EMAIL=enterprise@aisod.solutions
+NEXT_PUBLIC_SITE_URL=https://lrlm.aisod.tech
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX  # Google Analytics 4 ID
+CONTACT_EMAIL=enterprise@lrlm.aisod.tech
+
+# Demo Form Configuration (choose one service)
+DEMO_FORM_SERVICE=formspree  # Options: console, formspree, webhook, email
+FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+# DEMO_FORM_WEBHOOK_URL=https://your-webhook-url.com/api/forms
+# DEMO_FORM_API_KEY=your-webhook-api-key
 ```
 
 ## Performance Optimization
@@ -154,9 +160,45 @@ CONTACT_EMAIL=enterprise@aisod.solutions
    - Verify tracking is working
    - Set up conversion goals
 
+## Demo Form Configuration
+
+The demo booking form is configured to work with multiple backend services. Choose one of the following options:
+
+### Option 1: Formspree (Recommended for quick setup)
+1. Go to https://formspree.io/
+2. Create a free account
+3. Create a new form
+4. Copy the endpoint URL (e.g., `https://formspree.io/f/your-form-id`)
+5. Set environment variables:
+   ```env
+   DEMO_FORM_SERVICE=formspree
+   FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+   ```
+
+### Option 2: Custom Webhook
+Set up your own backend endpoint to receive form submissions:
+```env
+DEMO_FORM_SERVICE=webhook
+DEMO_FORM_WEBHOOK_URL=https://your-api.com/webhooks/demo-form
+DEMO_FORM_API_KEY=your-api-key
+```
+
+### Option 3: Email Integration
+Configure email delivery (requires additional setup):
+```env
+DEMO_FORM_SERVICE=email
+```
+*Note: Email integration requires additional backend code*
+
+### Option 4: Console Logging (Development)
+For testing purposes, form submissions are logged to console:
+```env
+DEMO_FORM_SERVICE=console
+```
+
 ## Support
 
 For issues or questions:
 - Check Next.js documentation: https://nextjs.org/docs
 - Vercel documentation: https://vercel.com/docs
-- AISOD Tech support: enterprise@aisod.solutions
+- AISOD Tech support: enterprise@lrlm.aisod.tech

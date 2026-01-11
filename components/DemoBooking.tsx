@@ -87,29 +87,54 @@ export default function DemoBooking() {
     setSubmitStatus(null);
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send form data to backend
+      const response = await fetch('/api/contact/demo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: 'website_demo_form'
+        }),
+      });
 
-      // Here you would typically send the form data to your backend
-      console.log("Form submitted:", formData);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-      setIsSubmitted(true);
-      setSubmitStatus('success');
+      const result = await response.json();
 
-      // Reset form after success
-      setTimeout(() => {
-        setFormData({
-          name: "",
-          email: "",
-          company: "",
-          role: "",
-          phone: "",
-          message: "",
-        });
-        setIsSubmitted(false);
-        setSubmitStatus(null);
-        setErrors({});
-      }, 5000);
+      if (result.success) {
+        setIsSubmitted(true);
+        setSubmitStatus('success');
+
+        // Track successful form submission
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'demo_form_submit', {
+            event_category: 'engagement',
+            event_label: 'demo_booking'
+          });
+        }
+
+        // Reset form after success
+        setTimeout(() => {
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            role: "",
+            phone: "",
+            message: "",
+          });
+          setIsSubmitted(false);
+          setSubmitStatus(null);
+          setErrors({});
+        }, 5000);
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
 
     } catch (error) {
       console.error("Form submission error:", error);
@@ -344,7 +369,7 @@ export default function DemoBooking() {
                   }`}>
                     {submitStatus === 'success'
                       ? "Thank you for your interest! Our team will contact you within 24 hours to schedule your personalized demo."
-                      : "There was an error sending your request. Please try again or contact us directly at enterprise@aisod.solutions."
+                      : "There was an error sending your request. Please try again or contact us directly at enterprise@lrlm.aisod.tech."
                     }
                   </p>
                 </div>

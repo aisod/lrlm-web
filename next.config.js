@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+const withNextIntl = require('next-intl/plugin')();
+
 const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -6,4 +7,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

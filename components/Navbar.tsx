@@ -4,12 +4,15 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import DarkModeToggle from "./DarkModeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const t = useTranslations('nav');
 
   useEffect(() => {
     setMounted(true);
@@ -59,35 +62,43 @@ export default function Navbar() {
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
               role="menuitem"
             >
-              Features
+              {t('features')}
             </Link>
             <Link
               href="#technology"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
               role="menuitem"
             >
-              Technology
+              {t('technology')}
             </Link>
             <Link
               href="#use-cases"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
               role="menuitem"
             >
-              Use Cases
+              {t('useCases')}
             </Link>
             <Link
               href="#pricing"
               className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
               role="menuitem"
             >
-              Pricing
+              {t('pricing')}
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
+              role="menuitem"
+            >
+              {t('about')}
             </Link>
             <DarkModeToggle />
+            <LanguageSwitcher />
             <Link
               href="#demo"
               className="btn-primary text-base px-6 py-2"
             >
-              Book Demo
+              {t('bookDemo')}
             </Link>
           </div>
 
@@ -118,38 +129,46 @@ export default function Navbar() {
               className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Features
+              {t('features')}
             </Link>
             <Link
               href="#technology"
               className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Technology
+              {t('technology')}
             </Link>
             <Link
               href="#use-cases"
               className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Use Cases
+              {t('useCases')}
             </Link>
             <Link
               href="#pricing"
               className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pricing
+              {t('pricing')}
             </Link>
-            <div className="flex items-center justify-center py-2">
+            <Link
+              href="/about"
+              className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('about')}
+            </Link>
+            <div className="flex items-center justify-center space-x-4 py-2">
               <DarkModeToggle />
+              <LanguageSwitcher />
             </div>
             <Link
               href="#demo"
               className="block btn-primary text-center text-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book Demo
+              {t('bookDemo')}
             </Link>
           </div>
         </div>

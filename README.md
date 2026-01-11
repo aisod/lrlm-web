@@ -122,8 +122,8 @@ The site can be deployed to any platform supporting Next.js:
 ## 📧 Contact
 
 For enterprise inquiries:
-- Email: enterprise@aisod.solutions
-- Website: https://aisod.solutions
+- Email: enterprise@lrlm.aisod.tech
+- Website: https://lrlm.aisod.tech
 
 ## 📄 License
 

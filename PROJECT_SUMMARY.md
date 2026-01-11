@@ -85,7 +85,7 @@ Website Pro/
    - Use Canva, Figma, or similar tool
 
 2. **Update Domain References**
-   - Search and replace `aisod.solutions` with your actual domain
+   - Search and replace `lrlm.aisod.tech` with your actual domain
    - Files to update:
      - `app/layout.tsx`
      - `app/sitemap.ts`

@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getLocale } from 'next-intl/server';
+import { locales } from '../i18n/request';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "AISOD LRLM - Namqula | African-First AI Language Model",
-  description: "Namqula is the first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient tokenization, offline-capable, and built for African cultural reasoning.",
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return {
+    title: "AISOD LRLM - Namqula | African-First AI Language Model",
+    description: "Namqula is the first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient tokenization, offline-capable, and built for African cultural reasoning.",
   keywords: [
     "African AI",
     "Language Model",
@@ -37,18 +42,18 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://aisod.solutions"),
+  metadataBase: new URL("https://lrlm.aisod.tech"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "AISOD LRLM - Namqula | African-First AI Language Model",
     description: "Namqula: The first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient, offline-capable, and culturally-aware.",
-    url: "https://aisod.solutions",
-    siteName: "AISOD Solutions",
+    url: "https://lrlm.aisod.tech",
+    siteName: "AISOD LRLM",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image",
         width: 1200,
         height: 630,
         alt: "AISOD LRLM - Namqula",
@@ -61,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AISOD LRLM - Namqula | African-First AI Language Model",
     description: "Namqula: The first sovereign Low Resource and Reasoning Language Model optimized for African languages.",
-    images: ["/og-image.png"],
+    images: ["/og-image"],
     creator: "@AISODTech",
   },
   robots: {
@@ -79,15 +84,21 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   category: "Artificial Intelligence",
-};
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -100,8 +111,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "AISOD Tech",
-              url: "https://aisod.solutions",
-              logo: "https://aisod.solutions/logo.png",
+              url: "https://lrlm.aisod.tech",
+              logo: "https://lrlm.aisod.tech/logo.png",
               description: "AISOD Tech develops Namqula, the first sovereign Low Resource and Reasoning Language Model optimized for African languages.",
               foundingDate: "2024",
               headquarters: {
@@ -120,7 +131,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Enterprise Sales",
-                email: "enterprise@aisod.solutions",
+                email: "enterprise@lrlm.aisod.tech",
                 areaServed: "Africa"
               },
             }),
@@ -173,10 +184,10 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "AISOD LRLM - Namqula",
               description: "African-First AI Language Model for sovereign data processing",
-              url: "https://aisod.solutions",
+              url: "https://lrlm.aisod.tech",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://aisod.solutions/search?q={search_term_string}",
+                target: "https://lrlm.aisod.tech/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               publisher: {
@@ -187,7 +198,14 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics GA_ID={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

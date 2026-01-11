@@ -38,8 +38,17 @@
 Create a `.env.local` file for any API keys or environment-specific settings:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://aisod.solutions
-CONTACT_EMAIL=enterprise@aisod.solutions
+NEXT_PUBLIC_SITE_URL=https://lrlm.aisod.tech
+CONTACT_EMAIL=enterprise@lrlm.aisod.tech
+
+# Google Analytics 4 (get from Google Analytics)
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+
+# Demo Form Configuration (choose one service)
+DEMO_FORM_SERVICE=formspree  # Options: console, formspree, webhook, email
+FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+# DEMO_FORM_WEBHOOK_URL=https://your-webhook-url.com/api/forms
+# DEMO_FORM_API_KEY=your-webhook-api-key
 ```
 
 ## Deployment Checklist

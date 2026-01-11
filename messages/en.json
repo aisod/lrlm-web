@@ -1,0 +1,232 @@
+{
+  "nav": {
+    "features": "Features",
+    "technology": "Technology",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "about": "About",
+    "bookDemo": "Book Demo"
+  },
+  "hero": {
+    "title": "African-First AI Language Model",
+    "subtitle": "The first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient tokenization, offline-capable, and built for African cultural reasoning.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Learn More"
+  },
+  "features": {
+    "title": "Revolutionary Features",
+    "subtitle": "Built specifically for African languages and cultural contexts",
+    "items": {
+      "efficiency": {
+        "title": "65% More Efficient",
+        "description": "Advanced tokenization optimized for African languages, reducing computational requirements while maintaining high accuracy."
+      },
+      "offline": {
+        "title": "Offline-Capable",
+        "description": "Run Namqula completely offline, ensuring data sovereignty and privacy for sensitive applications."
+      },
+      "cultural": {
+        "title": "Cultural Reasoning",
+        "description": "Trained on diverse African cultural contexts, providing culturally appropriate and contextually aware responses."
+      },
+      "sovereign": {
+        "title": "Data Sovereignty",
+        "description": "Keep your data within African borders with our sovereign AI infrastructure and local processing capabilities."
+      }
+    }
+  },
+  "technology": {
+    "title": "Advanced Technology",
+    "subtitle": "Cutting-edge AI architecture designed for African languages",
+    "description": "Namqula combines transformer architecture with specialized tokenization techniques optimized for low-resource African languages, delivering superior performance in challenging linguistic environments."
+  },
+  "useCases": {
+    "title": "Transforming Industries",
+    "subtitle": "Real-world applications across African markets",
+    "items": {
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Medical diagnosis and patient communication in local languages, improving healthcare access and outcomes."
+      },
+      "education": {
+        "title": "Education",
+        "description": "Interactive learning tools and content creation in African languages, expanding educational opportunities."
+      },
+      "finance": {
+        "title": "Financial Services",
+        "description": "Banking interfaces, fraud detection, and financial advice in local languages with cultural awareness."
+      },
+      "government": {
+        "title": "Government",
+        "description": "Public services, policy analysis, and citizen engagement platforms in multiple African languages."
+      },
+      "agriculture": {
+        "title": "Agriculture",
+        "description": "Crop monitoring, market analysis, and farmer support systems in local agricultural contexts."
+      },
+      "media": {
+        "title": "Media & Content",
+        "description": "News translation, content creation, and media analysis tools adapted for African markets."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Flexible Pricing",
+    "subtitle": "Choose the plan that fits your needs",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "price": "$99",
+        "period": "month",
+        "description": "Perfect for small businesses and startups",
+        "features": [
+          "Up to 10,000 tokens/month",
+          "Basic language support",
+          "Email support",
+          "API access"
+        ]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "$299",
+        "period": "month",
+        "description": "For growing businesses and enterprises",
+        "features": [
+          "Up to 100,000 tokens/month",
+          "All African languages",
+          "Priority support",
+          "Advanced API features",
+          "Custom integrations"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "pricing",
+        "description": "Tailored solutions for large organizations",
+        "features": [
+          "Unlimited tokens",
+          "Custom model training",
+          "Dedicated support",
+          "On-premise deployment",
+          "SLA guarantees"
+        ]
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Join the African AI revolution with Namqula",
+    "button": "Contact Us Today"
+  },
+  "footer": {
+    "description": "AISOD Tech develops Namqula, the first sovereign Low Resource and Reasoning Language Model optimized for African languages.",
+    "links": {
+      "company": "Company",
+      "about": "About",
+      "careers": "Careers",
+      "contact": "Contact",
+      "products": "Products",
+      "namqula": "Namqula LRLM",
+      "api": "API",
+      "integrations": "Integrations",
+      "resources": "Resources",
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "community": "Community",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© 2024 AISOD Tech. All rights reserved."
+  },
+  "demo": {
+    "title": "Book a Demo",
+    "subtitle": "See Namqula in action and discover how it can transform your business",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company",
+      "role": "Role",
+      "message": "Tell us about your use case",
+      "submit": "Book Demo"
+    }
+  },
+  "stats": {
+    "languages": "African Languages Supported",
+    "efficiency": "Tokenization Efficiency",
+    "accuracy": "Cultural Accuracy",
+    "users": "Active Users"
+  },
+  "about": {
+    "title": "About Namqula",
+    "subtitle": "Preserving African languages, empowering communities, and advancing AI through collaboration and cultural understanding.",
+    "mission": "Our Mission",
+    "missionDesc": "Namqula is more than just an AI language model—it's a movement to preserve, celebrate, and advance African languages and cultural heritage through technology and community collaboration.",
+    "culturalPreservation": "Cultural Preservation",
+    "culturalPreservationDesc": "Protecting and promoting African languages and cultural heritage for future generations.",
+    "communityEmpowerment": "Community Empowerment",
+    "communityEmpowermentDesc": "Building bridges between technology and traditional knowledge through inclusive collaboration.",
+    "innovation": "Innovation",
+    "innovationDesc": "Developing cutting-edge AI technology specifically designed for African languages and contexts.",
+    "communityEngagement": "Community Engagement Through Gaming",
+    "gameDesc": "Our interactive Namqula game at namqula.online serves as a powerful platform for community engagement and data collection.",
+    "namqulaGame": "The Namqula Game",
+    "gameContent": "An engaging educational game that not only entertains but also collects valuable linguistic and cultural data from our community. Through gameplay, users contribute stories, proverbs, grammar rules, vocabulary, and heritage resources that enrich our language models.",
+    "playGame": "Play Namqula",
+    "feedbackTitle": "Community Feedback & Collaboration",
+    "feedbackContent": "The game provides a direct channel for community input and feedback. Contributors receive recognition for their cultural knowledge, and we use their contributions to continuously improve and expand our language models.",
+    "contributors": "Our Community Contributors",
+    "contributorsDesc": "We collaborate with diverse stakeholders across Africa to build comprehensive language resources and cultural understanding.",
+    "individuals": "Individuals",
+    "individualsDesc": "Language enthusiasts and cultural contributors",
+    "companies": "Companies",
+    "companiesDesc": "Businesses supporting African language technology",
+    "universities": "Universities",
+    "universitiesDesc": "Academic institutions and researchers",
+    "bookWriters": "Book Writers",
+    "bookWritersDesc": "Authors and literary contributors",
+    "musicians": "Musicians",
+    "musiciansDesc": "Artists preserving cultural expression",
+    "comedians": "Comedians",
+    "comediansDesc": "Entertainers sharing linguistic humor",
+    "languageTeachers": "Language Teachers",
+    "languageTeachersDesc": "Educators guiding the next generation",
+    "universityStudents": "University Students",
+    "universityStudentsDesc": "Young scholars contributing fresh perspectives",
+    "lecturers": "Lecturers",
+    "lecturersDesc": "Academic experts in linguistics and culture",
+    "developers": "Developers",
+    "developersDesc": "Technical contributors building the future",
+    "communityLeaders": "Community Leaders",
+    "communityLeadersDesc": "Local leaders guiding cultural preservation",
+    "governmentEntities": "Government Entities",
+    "governmentEntitiesDesc": "Official bodies supporting language development",
+    "featuredContributors": "Featured Contributors",
+    "featuredDesc": "Some of our valued community partners who are already contributing to the Namqula ecosystem.",
+    "oshiwamboFounder": "Oshiwambo Chatbot Founder",
+    "oshiwamboDesc": "Leading developer of AI-powered Oshiwambo language tools, providing deep access to proverbs, verbs, nouns, and cultural stories.",
+    "teacherVasquez": "Teacher Vasquez School",
+    "teacherVasquezDesc": "Educational institution dedicated to preserving and teaching African languages through innovative methods and community engagement.",
+    "fixYourLanguage": "Fix Your Language",
+    "fixYourLanguageDesc": "Platform focused on native Namibian languages with a credible following, providing authentic linguistic resources and cultural content.",
+    "featuredPartner": "Featured Partner",
+    "educationalPartner": "Educational Partner",
+    "contentPartner": "Content Partner",
+    "realWorldImpact": "Real-World Impact",
+    "impactDesc": "Our technology serves communities, educators, and cultural enthusiasts across Africa.",
+    "education": "Education & Learning",
+    "educationDesc": "Teachers use our Oshiwambo chatbot to access authentic proverbs, stories, and grammatical resources. This helps students learn their heritage languages while gaining cultural understanding and historical knowledge.",
+    "culturalPreservation": "Cultural Preservation",
+    "culturalPreservationDesc": "Parents and families use our tools to help children maintain connections to their cultural roots. Our platform serves as a bridge between generations, preserving linguistic heritage for the future.",
+    "communityAccess": "Community Access",
+    "communityAccessDesc": "Anyone interested in African culture and history can explore proverbs, stories, and linguistic resources. Our platform serves as both an educational tool and a cultural guide for understanding complex linguistic concepts.",
+    "innovationDev": "Innovation & Development",
+    "innovationDevDesc": "Our growing contributor network continuously improves our language models. Every story, proverb, and grammatical insight helps us build more accurate and culturally-aware AI systems.",
+    "joinCommunity": "Join Our Community",
+    "joinDesc": "Help us preserve and advance African languages. Your contributions, whether through the game, content creation, or collaboration, make a real difference.",
+    "playNamqula": "Play Namqula Game",
+    "getInvolved": "Get Involved"
+  }
+}

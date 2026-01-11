@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Globe } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
@@ -90,7 +92,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-3xl md:text-6xl font-bold mb-6 text-gray-800 dark:text-gray-100 tracking-tight"
           >
-            African-First AI Language Model
+            {t('title')}
           </motion.h2>
 
           <motion.p
@@ -99,10 +101,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            The first sovereign Low Resource and Reasoning Language Model optimized for African languages. 
-            <span className="font-semibold text-primary-600 dark:text-primary-400"> 65% more efficient</span> tokenization, 
-            <span className="font-semibold text-primary-600 dark:text-primary-400"> offline-capable</span>, and built for 
-            <span className="font-semibold text-primary-600 dark:text-primary-400"> African cultural reasoning</span>.
+            {t('subtitle')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -116,7 +115,7 @@ export default function Hero() {
               href="#demo"
               className="btn-primary group flex items-center space-x-3 text-lg"
             >
-              <span>Book Enterprise Demo</span>
+              <span>{t('ctaPrimary')}</span>
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -124,7 +123,7 @@ export default function Hero() {
               className="btn-secondary group flex items-center space-x-3 text-lg"
             >
               <Globe className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-              <span>Learn More</span>
+              <span>{t('ctaSecondary')}</span>
             </Link>
           </motion.div>
 

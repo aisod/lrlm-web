@@ -61,12 +61,15 @@ export async function POST(request: NextRequest) {
           throw new Error('DEMO_FORM_WEBHOOK_URL environment variable not set');
         }
 
+        const apiKey = process.env.DEMO_FORM_API_KEY;
+        const headers: HeadersInit = {
+          'Content-Type': 'application/json',
+          ...(apiKey ? { Authorization: `Bearer ${apiKey}` } : {}),
+        };
+
         const webhookResponse = await fetch(webhookUrl, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': process.env.DEMO_FORM_API_KEY ? `Bearer ${process.env.DEMO_FORM_API_KEY}` : undefined,
-          },
+          headers,
           body: JSON.stringify({
             type: 'demo_request',
             data: body,

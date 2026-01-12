@@ -8,7 +8,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "AISOD LRLM - Namqula | African-First AI Language Model",
     description: "Namqula is the first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient tokenization, offline-capable, and built for African cultural reasoning.",

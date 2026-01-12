@@ -1,14 +1,10 @@
+"use client";
+
 import { useTranslations } from 'next-intl';
-import { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { Users, Gamepad2, MessageSquare, BookOpen, Music, GraduationCap, Code, Building, Users2, Heart, Globe, Lightbulb } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'About Namqula | African-First AI Language Model',
-  description: 'Learn about Namqula, the African-First AI Language Model, and our mission to preserve and advance African languages through community engagement and technology.',
-};
 
 export default function About() {
   const t = useTranslations('about');

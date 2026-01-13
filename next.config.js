@@ -6,6 +6,12 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [],
   },
+  // Fix workspace root warning
+  experimental: {
+    turbo: {
+      root: __dirname
+    }
+  }
 };
 
 module.exports = withNextIntl(nextConfig);

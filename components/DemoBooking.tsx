@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from 'next-intl';
 import { Calendar, Clock, Mail, Building2, Send, CheckCircle } from "lucide-react";
 
 interface FormErrors {
@@ -18,6 +19,8 @@ interface FormErrors {
 export default function DemoBooking() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations('demoForm');
+  const tForm = useTranslations('form');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,40 +39,40 @@ export default function DemoBooking() {
 
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Full name is required";
+      newErrors.name = tForm('errors.nameRequired');
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";
+      newErrors.name = tForm('errors.nameMinLength');
     }
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "Email address is required";
+      newErrors.email = tForm('errors.emailRequired');
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
+      newErrors.email = tForm('errors.emailInvalid');
     }
 
     // Company validation
     if (!formData.company.trim()) {
-      newErrors.company = "Company/Organization is required";
+      newErrors.company = tForm('errors.companyRequired');
     }
 
     // Role validation
     if (!formData.role) {
-      newErrors.role = "Please select your role";
+      newErrors.role = tForm('errors.roleRequired');
     }
 
     // Phone validation (optional but if provided, validate format)
     if (formData.phone.trim()) {
       const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
       if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
-        newErrors.phone = "Please enter a valid phone number";
+        newErrors.phone = tForm('errors.phoneInvalid');
       }
     }
 
     // Message validation (optional but if provided, minimum length)
     if (formData.message.trim() && formData.message.trim().length < 10) {
-      newErrors.message = "Please provide more details about your use case (minimum 10 characters)";
+      newErrors.message = tForm('errors.messageMinLength');
     }
 
     setErrors(newErrors);
@@ -201,7 +204,7 @@ export default function DemoBooking() {
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-300 dark:border-gray-600 focus:ring-blue-500"
                   }`}
-                  placeholder="John Doe"
+                  placeholder={tForm('placeholders.fullName')}
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? "name-error" : undefined}
                 />
@@ -227,7 +230,7 @@ export default function DemoBooking() {
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-300 dark:border-gray-600 focus:ring-blue-500"
                   }`}
-                  placeholder="john@company.com"
+                  placeholder={tForm('placeholders.email')}
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
                 />
@@ -253,7 +256,7 @@ export default function DemoBooking() {
                       ? "border-red-500 focus:ring-red-500"
                       : "border-gray-300 dark:border-gray-600 focus:ring-blue-500"
                   }`}
-                  placeholder="Your Company"
+                  placeholder={tForm('placeholders.company')}
                   aria-invalid={!!errors.company}
                   aria-describedby={errors.company ? "company-error" : undefined}
                 />
@@ -296,7 +299,7 @@ export default function DemoBooking() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                  placeholder="+264 XX XXX XXXX"
+                  placeholder={tForm('placeholders.phone')}
                 />
               </div>
 
@@ -311,7 +314,7 @@ export default function DemoBooking() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Tell us about your use case or specific requirements..."
+                  placeholder={tForm('placeholders.message')}
                 />
               </div>
 

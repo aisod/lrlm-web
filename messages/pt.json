@@ -159,6 +159,26 @@
     "accuracy": "Precisão Cultural",
     "users": "Usuários Ativos"
   },
+  "form": {
+    "errors": {
+      "nameRequired": "Nome completo é obrigatório",
+      "nameMinLength": "Nome deve ter pelo menos 2 caracteres",
+      "emailRequired": "Endereço de email é obrigatório",
+      "emailInvalid": "Por favor, insira um endereço de email válido",
+      "companyRequired": "Empresa/Organização é obrigatória",
+      "roleRequired": "Por favor, selecione sua função",
+      "phoneInvalid": "Por favor, insira um número de telefone válido",
+      "messageMinLength": "Por favor, forneça mais detalhes sobre seu caso de uso (mínimo de 10 caracteres)",
+      "submissionFailed": "Falha no envio"
+    },
+    "placeholders": {
+      "fullName": "João Silva",
+      "email": "joao@empresa.com",
+      "company": "Sua Empresa",
+      "phone": "+244 912 345 678",
+      "message": "Conte-nos sobre seu caso de uso"
+    }
+  },
   "about": {
     "title": "Sobre o Namqula",
     "subtitle": "Preservando idiomas africanos, capacitando comunidades e avançando a IA através da colaboração e compreensão cultural.",

@@ -159,6 +159,26 @@
     "accuracy": "Cultural Accuracy",
     "users": "Active Users"
   },
+  "form": {
+    "errors": {
+      "nameRequired": "Full name is required",
+      "nameMinLength": "Name must be at least 2 characters",
+      "emailRequired": "Email address is required",
+      "emailInvalid": "Please enter a valid email address",
+      "companyRequired": "Company/Organization is required",
+      "roleRequired": "Please select your role",
+      "phoneInvalid": "Please enter a valid phone number",
+      "messageMinLength": "Please provide more details about your use case (minimum 10 characters)",
+      "submissionFailed": "Submission failed"
+    },
+    "placeholders": {
+      "fullName": "John Doe",
+      "email": "john@company.com",
+      "company": "Your Company",
+      "phone": "+1 (555) 123-4567",
+      "message": "Tell us about your use case"
+    }
+  },
   "about": {
     "title": "About Namqula",
     "subtitle": "Preserving African languages, empowering communities, and advancing AI through collaboration and cultural understanding.",

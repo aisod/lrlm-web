@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
               opacity: '0.7',
             }}
           >
-            lrlm.aisod.tech
+            aisod.solutions
           </div>
         </div>
       ),

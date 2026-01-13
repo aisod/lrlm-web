@@ -42,14 +42,14 @@ export async function generateMetadata(): Promise<Metadata> {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://lrlm.aisod.tech"),
+  metadataBase: new URL("https://aisod.solutions"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "AISOD LRLM - Namqula | African-First AI Language Model",
     description: "Namqula: The first sovereign Low Resource and Reasoning Language Model optimized for African languages. 65% more efficient, offline-capable, and culturally-aware.",
-    url: "https://lrlm.aisod.tech",
+    url: "https://aisod.solutions",
     siteName: "AISOD LRLM",
     images: [
       {
@@ -110,8 +110,8 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "AISOD Tech",
-              url: "https://lrlm.aisod.tech",
-              logo: "https://lrlm.aisod.tech/logo.png",
+              url: "https://aisod.solutions",
+              logo: "https://aisod.solutions/logo.png",
               description: "AISOD Tech develops Namqula, the first sovereign Low Resource and Reasoning Language Model optimized for African languages.",
               foundingDate: "2024",
               headquarters: {
@@ -130,7 +130,7 @@ export default async function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "Enterprise Sales",
-                email: "enterprise@lrlm.aisod.tech",
+                email: "enterprise@aisod.solutions",
                 areaServed: "Africa"
               },
             }),
@@ -183,10 +183,10 @@ export default async function RootLayout({
               "@type": "WebSite",
               name: "AISOD LRLM - Namqula",
               description: "African-First AI Language Model for sovereign data processing",
-              url: "https://lrlm.aisod.tech",
+              url: "https://aisod.solutions",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://lrlm.aisod.tech/search?q={search_term_string}",
+                target: "https://aisod.solutions/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               },
               publisher: {

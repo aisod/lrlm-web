@@ -90,8 +90,8 @@ export default function Footer() {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <Mail className="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" />
-                <a href="mailto:enterprise@lrlm.aisod.tech" className="hover:text-primary-400 transition-colors">
-                  enterprise@lrlm.aisod.tech
+                <a href="mailto:enterprise@aisod.solutions" className="hover:text-primary-400 transition-colors">
+                  enterprise@aisod.solutions
                 </a>
               </li>
               <li className="flex items-start">

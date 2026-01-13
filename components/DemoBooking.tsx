@@ -369,7 +369,7 @@ export default function DemoBooking() {
                   }`}>
                     {submitStatus === 'success'
                       ? "Thank you for your interest! Our team will contact you within 24 hours to schedule your personalized demo."
-                      : "There was an error sending your request. Please try again or contact us directly at enterprise@lrlm.aisod.tech."
+                      : "There was an error sending your request. Please try again or contact us directly at enterprise@aisod.solutions."
                     }
                   </p>
                 </div>

@@ -7,10 +7,8 @@ const nextConfig = {
     remotePatterns: [],
   },
   // Fix workspace root warning
-  experimental: {
-    turbo: {
-      root: __dirname
-    }
+  turbopack: {
+    root: __dirname
   }
 };
 

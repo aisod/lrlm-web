@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Twitter, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
+  const tCommon = useTranslations('common');
+  
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -104,7 +107,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} AISOD Tech. All rights reserved.
+            © {new Date().getFullYear()} AISOD Tech. {tCommon('copyrightText')}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-sm text-gray-400 hover:text-primary-400 transition-colors">

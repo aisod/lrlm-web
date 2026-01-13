@@ -176,7 +176,7 @@ export default function DemoBooking() {
             Book an Enterprise Demo
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            See how Namqula LRLM can transform your organization. Schedule a personalized demonstration with our team.
+            {tForm('descriptions.seeHowTransform')}
           </p>
         </motion.div>
 
@@ -391,7 +391,7 @@ export default function DemoBooking() {
               <Calendar className="w-12 h-12 mb-4" />
               <h3 className="text-2xl font-bold mb-3">Schedule Your Demo</h3>
               <p className="text-primary-100 mb-4">
-                Book a 30-minute personalized demonstration of Namqula LRLM tailored to your industry and use case.
+                {tForm('descriptions.bookDemo')}
               </p>
               <ul className="space-y-2 text-primary-100">
                 <li className="flex items-start">
@@ -419,7 +419,7 @@ export default function DemoBooking() {
               <div className="space-y-4 text-gray-600 dark:text-gray-300">
                 <div>
                   <p className="font-semibold mb-1">1. Introduction (5 min)</p>
-                  <p className="text-sm">Overview of AISOD and Namqula LRLM</p>
+                  <p className="text-sm">{tForm('descriptions.overviewText')}</p>
                 </div>
                 <div>
                   <p className="font-semibold mb-1">2. Live Demo (15 min)</p>

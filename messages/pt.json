@@ -177,7 +177,32 @@
       "company": "Sua Empresa",
       "phone": "+244 912 345 678",
       "message": "Conte-nos sobre seu caso de uso"
+    },
+    "descriptions": {
+      "seeHowTransform": "Veja como Namqula LRLM pode transformar sua organização. Agende uma demonstração personalizada com nossa equipe.",
+      "bookDemo": "Agende uma demonstração personalizada de 30 minutos do Namqula LRLM adaptada à sua indústria e caso de uso.",
+      "overviewText": "Visão geral da AISOD e Namqula LRLM"
     }
+  },
+  "common": {
+    "readyToTransform": "Pronto para Transformar sua Organização?",
+    "joinLeadingInstitutions": "Junte-se às principais instituições africanas usando Namqula LRLM para desbloquear o poder da IA em idiomas nativos.",
+    "competitiveAdvantage": "Vantagem Competitiva",
+    "feature": "Recurso",
+    "globalModels": "Modelos Globais",
+    "aisodNamqula": "AISOD Namqula",
+    "westernCentric": "Centrado no Ocidente",
+    "africanCentric": "Centrado na África",
+    "culturalFramework": "Estrutura Cultural",
+    "tokenization": "Tokenização",
+    "inefficient": "Ineficiente",
+    "optimized": "65% Mais Eficiente",
+    "deploymentOptions": "Opções de Implantação",
+    "cloudOnly": "Apenas Nuvem",
+    "cloudAndEdge": "Nuvem + Edge + Offline",
+    "enterpriseUseCases": "Casos de Uso Empresariais",
+    "namqulaPowers": "Namqula LRLM alimenta operações críticas em todas as indústrias, do governo à agricultura.",
+    "copyrightText": "Todos os direitos reservados."
   },
   "about": {
     "title": "Sobre o Namqula",

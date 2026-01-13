@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from 'next-intl';
 import { Code, Database, Network, Layers } from "lucide-react";
 
 const technologies = [
@@ -31,6 +32,8 @@ const technologies = [
 export default function Technology() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations('technology');
+  const tCommon = useTranslations('common');
 
   return (
     <section id="technology" ref={ref} className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -90,7 +93,7 @@ export default function Technology() {
                 <tr className="border-b border-gray-200 dark:border-gray-700">
                   <th className="text-left py-4 px-4 text-gray-700 dark:text-gray-300 font-semibold">Feature</th>
                   <th className="text-center py-4 px-4 text-gray-700 dark:text-gray-300 font-semibold">Global Models</th>
-                  <th className="text-center py-4 px-4 text-blue-600 dark:text-blue-400 font-semibold">AISOD Namqula</th>
+                  <th className="text-center py-4 px-4 text-blue-600 dark:text-blue-400 font-semibold">{tCommon('aisodNamqula')}</th>
                 </tr>
               </thead>
               <tbody>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from 'next-intl';
 import { Building2, Scale, Stethoscope, Sprout, GraduationCap, DollarSign } from "lucide-react";
 
 const useCases = [
@@ -47,6 +48,8 @@ const useCases = [
 export default function UseCases() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const t = useTranslations('useCases');
+  const tCommon = useTranslations('common');
 
   return (
     <section id="use-cases" ref={ref} className="py-20 bg-white dark:bg-gray-800">
@@ -61,7 +64,7 @@ export default function UseCases() {
             Enterprise Use Cases
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Namqula LRLM powers critical operations across industries, from government to agriculture.
+            {t('subtitle')}
           </p>
         </motion.div>
 

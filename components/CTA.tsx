@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from 'next-intl';
 import { ArrowRight, Globe } from "lucide-react";
 import Link from "next/link";
 
 export default function CTA() {
+  const tCommon = useTranslations('common');
+  
   return (
     <section className="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
       {/* Enhanced Background */}
@@ -34,10 +37,10 @@ export default function CTA() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Organization?
+            {tCommon('readyToTransform')}
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join leading African institutions using Namqula LRLM to unlock the power of AI in native languages.
+            {tCommon('joinLeadingInstitutions')}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link

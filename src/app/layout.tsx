@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getLocale } from 'next-intl/server';
-import { locales } from '../i18n/request';
+import { getLocale } from 'next-intl/server';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import "./globals.css";
 
@@ -92,10 +90,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const locale = await getLocale();
-  const messages = await getMessages();
 
   return (
     <html lang={locale}>
@@ -201,9 +196,7 @@ export default async function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics GA_ID={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        {children}
       </body>
     </html>
   );
